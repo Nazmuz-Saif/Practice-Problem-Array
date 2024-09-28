@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    int n,i,j;
+    int n,i,j,c=0;
     printf("array size: ");
     scanf("%d",&n);
     int arr[n];
@@ -14,8 +14,12 @@ int main()
         for(j=i+1; j<n; j++){
             if(arr[i]==arr[j]){
                 printf("%d", arr[i]);
+                c++;
             }
         }
+    }
+    if(c==0){
+        printf("-1");
     }
 
     return 0;
